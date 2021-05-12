@@ -1,0 +1,33 @@
+header {
+    background-color: #363636;
+    padding: 30px 25px
+}
+
+.is-white {
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside {
+    padding: 20px;
+    flex: 25%;
+}
+
+section{
+    padding: 20px;
+    flex: 75%;
+    min-height: 75vh;
+}
+
+.search-field {
+    padding-bottom: 10px;
+    border-bottom: 4px solid #444444;
+}
+
+.search-history {
+    padding-top: 10px;
+}

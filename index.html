@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1 class="title is-1 is-white"> Weather Dashboard</h1>
+        </div>
+    </header>
+
+    <main>
+        <aside>
+            <div class="search-field">
+                <h2 class="title is-3">Search for a City:</h2>
+                <div class="field">
+                    <input class="input" type="text" placeholder="Pheonix">
+                </div>
+                <div class=field>
+                    <button class="button is-dark is-fullwidth">Search</button>
+                </div>
+            </div>
+            <div class="search-history">
+                <div class="field">
+                    <button class="button is-light is-fullwidth">Austin</button>
+                </div>
+                <div class="field">
+                    <button class="button is-light is-fullwidth">Chicago</button>
+                </div>
+                <div class="field">
+                    <button class="button is-light is-fullwidth">New York</button>
+                </div>
+                <div class="field">
+                    <button class="button is-light is-fullwidth">Orlando</button>
+                </div>
+                <div class="field">
+                    <button class="button is-light is-fullwidth">San Francisco</button>
+                </div>
+                <div class="field">
+                    <button class="button is-light is-fullwidth">Seattle</button>
+                </div>
+                <div class="field">
+                    <button class="button is-light is-fullwidth">Denver</button>
+                </div>
+                <div class="field">
+                    <button class="button is-light is-fullwidth">Atlanta</button>
+                </div>
+            </div>
+        </aside>
+        <section>
+            <article class="panel is-dark">
+                <p class="panel-heading">
+                    Atlanta (3/30/2021)
+                </p>
+                <a class="panel-block is-active">
+                    <span class="panel-icon">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                    </span>
+                    Temp
+                </a>
+                <a class="panel-block">
+                    <span class="panel-icon">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                    </span>
+                    Wind
+                </a>
+                <a class="panel-block">
+                    <span class="panel-icon">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                    </span>
+                    Humidity
+                </a>
+                <a class="panel-block">
+                    <span class="panel-icon">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                    </span>
+                    UV Index
+                </a>
+            </article>
+            <div class="weather-days">
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <p class="title">One</p>
+                            <p class="subtitle">Temp</p>
+                            <p class="subtitle">Wind</p>
+                            <p class="subtitle">Humidity</p>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <p class="title">Two</p>
+                            <p class="subtitle">Temp</p>
+                            <p class="subtitle">Wind</p>
+                            <p class="subtitle">Humidity</p>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <p class="title">Three</p>
+                            <p class="subtitle">Temp</p>
+                            <p class="subtitle">Wind</p>
+                            <p class="subtitle">Humidity</p>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <p class="title">Four</p>
+                            <p class="subtitle">Temp</p>
+                            <p class="subtitle">Wind</p>
+                            <p class="subtitle">Humidity</p>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <p class="title">Five</p>
+                            <p class="subtitle">Temp</p>
+                            <p class="subtitle">Wind</p>
+                            <p class="subtitle">Humidity</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Weather Dashboard</strong> by <a href="https://github.com/LifeInvaderr" target="_blank">Matthew
+                    Kaus</a>. The link to the
+                <a href="https://github.com/LifeInvaderr/Weather-Challenge" target="_blank">repository</a>. The API
+                is from <a href="https://openweathermap.org/api/one-call-api" target="_blank">OpenWeather</a>.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
