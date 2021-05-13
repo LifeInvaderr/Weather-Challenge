@@ -14,21 +14,31 @@
 <body>
     <header>
         <div>
-            <h1 class="title is-1 is-white"> Weather Dashboard</h1>
+            <h1 class="title is-1 is-white">Weather Dashboard</h1>
         </div>
     </header>
 
     <main>
         <aside>
-            <div class="search-field">
+                <div>
                 <h2 class="title is-3">Search for a City:</h2>
-                <div class="field">
-                    <input class="input" type="text" placeholder="Pheonix">
+                    <form id="search-field">
+                        <div class="field">
+                            <input class="input" 
+                            name="city" 
+                            id="city-input" 
+                            type="text" 
+                            placeholder="Pheonix"/>
+                        </div>
+                        <div class=field>
+                            <button 
+                            type="submit" 
+                            id="sbmt-btn" 
+                            class="button is-dark is-fullwidth"
+                            >Search</button>
+                        </div>
+                    </form>
                 </div>
-                <div class=field>
-                    <button class="button is-dark is-fullwidth">Search</button>
-                </div>
-            </div>
             <div class="search-history">
                 <div class="field">
                     <button class="button is-light is-fullwidth">Austin</button>
@@ -56,10 +66,35 @@
                 </div>
             </div>
         </aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <section>
             <article class="panel is-dark">
                 <p class="panel-heading">
-                    Atlanta (3/30/2021)
+                    City: (todays date)
                 </p>
                 <a class="panel-block is-active">
                     <span class="panel-icon">
