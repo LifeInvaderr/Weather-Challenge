@@ -20,26 +20,18 @@
 
     <main>
         <aside>
-                <div>
+            <div>
                 <h2 class="title is-3">Search for a City:</h2>
-                    <form id="search-field">
-                        <div class="field">
-                            <input class="input" 
-                            name="city" 
-                            id="city-input" 
-                            type="text" 
-                            placeholder="Pheonix"/>
-                        </div>
-                        <div class=field>
-                            <button 
-                            type="submit" 
-                            id="sbmt-btn" 
-                            class="button is-dark is-fullwidth"
-                            >Search</button>
-                        </div>
-                    </form>
-                </div>
-            <div class="search-history">
+                <form id="search-field">
+                    <div class="field">
+                        <input class="input" name="city" id="city-input" type="text" placeholder="Phoenix" />
+                    </div>
+                    <div class=field>
+                        <button type="submit" id="sbmt-btn" class="button is-dark is-fullwidth">Search</button>
+                    </div>
+                </form>
+            </div>
+            <!-- <div class="search-history">
                 <div class="field">
                     <button class="button is-light is-fullwidth">Austin</button>
                 </div>
@@ -64,7 +56,7 @@
                 <div class="field">
                     <button class="button is-light is-fullwidth">Atlanta</button>
                 </div>
-            </div>
+            </div> -->
         </aside>
 
 
@@ -94,76 +86,83 @@
         <section>
             <article class="panel is-dark">
                 <p class="panel-heading">
-                    City: (todays date)
+                    City: <span class="city-name"></span>
                 </p>
                 <a class="panel-block is-active">
                     <span class="panel-icon">
                         <i class="fas fa-book" aria-hidden="true"></i>
                     </span>
-                    Temp
+                    <p>Temp <span class="current-temp"></span></p>
                 </a>
                 <a class="panel-block">
                     <span class="panel-icon">
                         <i class="fas fa-book" aria-hidden="true"></i>
                     </span>
-                    Wind
+                    <p>Wind <span class="current-wind"></span></p>
                 </a>
                 <a class="panel-block">
                     <span class="panel-icon">
                         <i class="fas fa-book" aria-hidden="true"></i>
                     </span>
-                    Humidity
+                    <p>Humidity <span class="current-humidity"></span></p>
                 </a>
                 <a class="panel-block">
                     <span class="panel-icon">
                         <i class="fas fa-book" aria-hidden="true"></i>
                     </span>
-                    UV Index
+                    <p>UV Index <span class="current-uv"></span></p>
+                    
                 </a>
             </article>
             <div class="weather-days">
-                <div class="tile is-ancestor">
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <p class="title">One</p>
-                            <p class="subtitle">Temp</p>
-                            <p class="subtitle">Wind</p>
-                            <p class="subtitle">Humidity</p>
-                        </article>
+                <article class="panel is-dark">
+                    <p class="panel-heading">
+                        Futures
+                    </p>
+
+                    <div class="tile is-ancestor">
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">One</p>
+                                <p class="subtitle">Temp</p>
+                                <p class="subtitle">Wind</p>
+                                <p class="subtitle">Humidity</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">Two</p>
+                                <p class="subtitle">Temp</p>
+                                <p class="subtitle">Wind</p>
+                                <p class="subtitle">Humidity</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">Three</p>
+                                <p class="subtitle">Temp</p>
+                                <p class="subtitle">Wind</p>
+                                <p class="subtitle">Humidity</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">Four</p>
+                                <p class="subtitle">Temp</p>
+                                <p class="subtitle">Wind</p>
+                                <p class="subtitle">Humidity</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">Five</p>
+                                <p class="subtitle">Temp</p>
+                                <p class="subtitle">Wind</p>
+                                <p class="subtitle">Humidity</p>
+                            </article>
+                        </div>
                     </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <p class="title">Two</p>
-                            <p class="subtitle">Temp</p>
-                            <p class="subtitle">Wind</p>
-                            <p class="subtitle">Humidity</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <p class="title">Three</p>
-                            <p class="subtitle">Temp</p>
-                            <p class="subtitle">Wind</p>
-                            <p class="subtitle">Humidity</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <p class="title">Four</p>
-                            <p class="subtitle">Temp</p>
-                            <p class="subtitle">Wind</p>
-                            <p class="subtitle">Humidity</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <p class="title">Five</p>
-                            <p class="subtitle">Temp</p>
-                            <p class="subtitle">Wind</p>
-                            <p class="subtitle">Humidity</p>
-                        </article>
-                    </div>
-                </div>
+                </article>
             </div>
         </section>
     </main>

@@ -8,6 +8,7 @@ $(document).ready(function () {
     var searchFieldEl = $("#search-field");
     var submitEl = $("#sbmt-btn")
 
+    // Resource fromm https://www.youtube.com/watch?v=f3Auvf9pN6s
     searchFieldEl.submit(function (event) {
         event.preventDefault();
 
@@ -20,53 +21,66 @@ $(document).ready(function () {
         } else {
             alert("Please enter a city")
         }
-
-
     });
 
-
-
-
-
-
-
-
-
-    // var iconcode = a.weather[0].icon;
-    // var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-    // $('#wicon').attr('src', iconurl);
-
+    // First fetch for current weath to get longitude and latitude
     var getWeather = function (city) {
-        fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=17d8a2c1551299169e5ab5c406cb1540")
+        var weatherAPI = ("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + apiKey)
+        fetch(weatherAPI)
             .then(function (response) {
                 response.json()
                     .then(function (data) {
                         console.log(data)
                         generateCurrentWeath(data)
-                    })
+
+                        console.log(data.coord.lat)
+                        console.log(data.coord.lon)
+
+                        var latCordinate = (data.coord.lat);
+                        var lonCordinate = (data.coord.lon);
+
+                        fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + latCordinate + "&lon=" + lonCordinate + "&units=imperial&appid=" + apiKey)
+                            .then(function (response) {
+                                response.json()
+                                    .then(function (newData) {
+                                        console.log(newData)
+                                        generateFutureWeath(newData)
+                                    }
+                                    )
+                            })
+
+                    });
             });
     };
-
-    // getWeather();
-
-
+    // function to grab current weather and apply to current weath card
     function generateCurrentWeath(data) {
-        // var icon = $('<img src="https://openweathermap.org/img/wn/" +"01d" + ".png"></img>')
-        $(".panel-heading").text(data.name)
-        // $(".field").append(icon)
-
-        var iconcode = data.weather[0].icon;
-        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png"
-        var icon = $("<img>")
-        icon.attr("src", iconurl)
-
-        // $(".field").append(icon)
-
-
-        console.log(iconcode);
-        console.log
+        $(".city-name").text(data.name);
+        $(".current-temp").text(data.main.temp + "°F");
+        $(".current-wind").text(data.wind.speed + " MPH");
+        $(".current-humidity").text(data.main.humidity);
     }
 
+    function generateFutureWeath(newData) {
+
+        //current weath UV index
+        $(".current-uv").text(newData.current.uvi);
+
+        // First Card
+
+        // Second Card
+
+        // Third Card
+
+        // Fourth Card
+
+        // Fifth Card
+
+
+
+
+
+    }
+});
 
 
 
@@ -90,10 +104,3 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-})
