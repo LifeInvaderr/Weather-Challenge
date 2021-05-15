@@ -25,7 +25,7 @@ $(document).ready(function () {
 
     // First fetch for current weath to get longitude and latitude
     var getWeather = function (city) {
-        var weatherAPI = ("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + apiKey)
+        var weatherAPI = ("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&exclude=minutely,hourly,alerts&units=imperial&appid=" + apiKey)
         fetch(weatherAPI)
             .then(function (response) {
                 response.json()
@@ -57,23 +57,47 @@ $(document).ready(function () {
         $(".city-name").text(data.name);
         $(".current-temp").text(data.main.temp + "°F");
         $(".current-wind").text(data.wind.speed + " MPH");
-        $(".current-humidity").text(data.main.humidity);
+        $(".current-humidity").text(data.main.humidity + "%");
     }
 
     function generateFutureWeath(newData) {
 
-        //current weath UV index
+        // Timezone plugin
+        var timeZone = newData.timezone;
+        console.log(timeZone)
+
+
+
+
+        //current weather UV index
         $(".current-uv").text(newData.current.uvi);
 
         // First Card
+        $(".day-one-temp").text(newData.daily[1].feels_like.day + "°F")
+        $(".day-one-wind").text(newData.daily[1].wind_speed + " MPH")
+        $(".day-one-humidity").text(newData.daily[1].humidity + "%")
 
         // Second Card
+        $(".day-two-temp").text(newData.daily[2].feels_like.day + "°F")
+        $(".day-two-wind").text(newData.daily[2].wind_speed + " MPH")
+        $(".day-two-humidity").text(newData.daily[2].humidity + "%")
 
         // Third Card
+        $(".day-three-temp").text(newData.daily[3].feels_like.day + "°F")
+        $(".day-three-wind").text(newData.daily[3].wind_speed + " MPH")
+        $(".day-three-humidity").text(newData.daily[3].humidity + "%")
 
         // Fourth Card
+        $(".day-four-temp").text(newData.daily[4].feels_like.day + "°F")
+        $(".day-four-wind").text(newData.daily[4].wind_speed + " MPH")
+        $(".day-four-humidity").text(newData.daily[4].humidity + "%")
 
         // Fifth Card
+
+        $(".day-five-temp").text(newData.daily[5].feels_like.day + "°F")
+        $(".day-five-wind").text(newData.daily[5].wind_speed + " MPH")
+        $(".day-five-humidity").text(newData.daily[5].humidity + "%")
+
 
 
 
