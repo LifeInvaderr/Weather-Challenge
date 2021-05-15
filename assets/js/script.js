@@ -62,15 +62,9 @@ $(document).ready(function () {
 
     function generateFutureWeath(newData) {
 
-        // Timezone plugin
-        var timeZone = newData.timezone;
-        console.log(timeZone)
-
-
-
-
         //current weather UV index
         $(".current-uv").text(newData.current.uvi);
+        $(".current-date").text()
 
         // First Card
         $(".day-one-temp").text(newData.daily[1].feels_like.day + "°F")
@@ -93,16 +87,21 @@ $(document).ready(function () {
         $(".day-four-humidity").text(newData.daily[4].humidity + "%")
 
         // Fifth Card
-
         $(".day-five-temp").text(newData.daily[5].feels_like.day + "°F")
         $(".day-five-wind").text(newData.daily[5].wind_speed + " MPH")
         $(".day-five-humidity").text(newData.daily[5].humidity + "%")
 
+        // Timezone plugin
+        var timeZone = newData.timezone;
+        console.log(timeZone)
 
-
-
-
-
+        // moment().tz(newData.timezone).format('YYYY/MM/DD HH:mm')
+        $(".current-date").text(moment().tz(timeZone).format('(DD/MM/YYYY)'))
+        $(".day-one").text(moment().tz(timeZone).add(1, "days").format('DD/MM/YYYY'))
+        $(".day-two").text(moment().tz(timeZone).add(2, "days").format('DD/MM/YYYY'))
+        $(".day-three").text(moment().tz(timeZone).add(3, "days").format('DD/MM/YYYY'))
+        $(".day-four").text(moment().tz(timeZone).add(4, "days").format('DD/MM/YYYY'))
+        $(".day-five").text(moment().tz(timeZone).add(5, "days").format('DD/MM/YYYY'))
     }
 });
 
