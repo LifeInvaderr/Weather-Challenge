@@ -7,9 +7,30 @@ $(document).ready(function () {
     var cityEl = $("#city-input");
     var searchFieldEl = $("#search-field");
     var submitEl = $("#sbmt-btn");
+    var delButton = $("#clear");
 
-    //array local starage
+    delButton.click(function () {
+        localStorage.clear();
+    })
+
+
+
+    // Local storage
     var saveCity = JSON.parse(localStorage.getItem("cityName")) || [];
+    var getLocalStorage = localStorage.getItem("cityName");
+    var getCity = JSON.parse(getLocalStorage);
+
+    
+    function loadData() {
+        for (i = 0; i < getCity.length; i++) {
+            var create = $("<button>")
+            create.attr("class", "button is-light is-fullwidth")
+            create.attr("type", "button")
+            create.text(getCity[i])
+            $(".search-history").prepend(create)
+        }
+    }
+
 
     // Resource fromm https://www.youtube.com/watch?v=f3Auvf9pN6s
     searchFieldEl.submit(function (event) {
@@ -111,7 +132,16 @@ $(document).ready(function () {
         $(".day-three").text(moment().tz(timeZone).add(3, "days").format('DD/MM/YY'))
         $(".day-four").text(moment().tz(timeZone).add(4, "days").format('DD/MM/YY'))
         $(".day-five").text(moment().tz(timeZone).add(5, "days").format('DD/MM/YY'))
+
+
+        $(".search-history").empty();
+
+        loadData();
     }
+
+    console.log(getCity)
+    loadData()
+
 
 
 });
