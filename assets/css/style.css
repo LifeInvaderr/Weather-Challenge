@@ -14,12 +14,12 @@ main {
 
 aside {
     padding: 20px;
-    flex: 25%;
+    flex: 20%;
 }
 
 section{
     padding: 20px;
-    flex: 75%;
+    flex: 80%;
     min-height: 75vh;
 }
 

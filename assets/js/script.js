@@ -6,7 +6,10 @@ $(document).ready(function () {
     // DOM elements
     var cityEl = $("#city-input");
     var searchFieldEl = $("#search-field");
-    var submitEl = $("#sbmt-btn")
+    var submitEl = $("#sbmt-btn");
+
+    //array local starage
+    var saveCity = JSON.parse(localStorage.getItem("cityName")) || [];
 
     // Resource fromm https://www.youtube.com/watch?v=f3Auvf9pN6s
     searchFieldEl.submit(function (event) {
@@ -14,7 +17,7 @@ $(document).ready(function () {
 
         // get value from input
         var cityVal = cityEl.val();
-        console.log(cityVal);
+        // console.log(cityVal);
 
         if (cityEl) {
             getWeather(cityVal);
@@ -38,6 +41,12 @@ $(document).ready(function () {
 
                         var latCordinate = (data.coord.lat);
                         var lonCordinate = (data.coord.lon);
+
+                        // Local storage
+                        if (saveCity.indexOf(data.name) == -1) {
+                            saveCity.push(data.name)
+                            localStorage.setItem("cityName", JSON.stringify(saveCity))
+                        }
 
                         fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + latCordinate + "&lon=" + lonCordinate + "&units=imperial&appid=" + apiKey)
                             .then(function (response) {
@@ -97,12 +106,14 @@ $(document).ready(function () {
 
         // moment().tz(newData.timezone).format('YYYY/MM/DD HH:mm')
         $(".current-date").text(moment().tz(timeZone).format('(DD/MM/YYYY)'))
-        $(".day-one").text(moment().tz(timeZone).add(1, "days").format('DD/MM/YYYY'))
-        $(".day-two").text(moment().tz(timeZone).add(2, "days").format('DD/MM/YYYY'))
-        $(".day-three").text(moment().tz(timeZone).add(3, "days").format('DD/MM/YYYY'))
-        $(".day-four").text(moment().tz(timeZone).add(4, "days").format('DD/MM/YYYY'))
-        $(".day-five").text(moment().tz(timeZone).add(5, "days").format('DD/MM/YYYY'))
+        $(".day-one").text(moment().tz(timeZone).add(1, "days").format('DD/MM/YY'))
+        $(".day-two").text(moment().tz(timeZone).add(2, "days").format('DD/MM/YY'))
+        $(".day-three").text(moment().tz(timeZone).add(3, "days").format('DD/MM/YY'))
+        $(".day-four").text(moment().tz(timeZone).add(4, "days").format('DD/MM/YY'))
+        $(".day-five").text(moment().tz(timeZone).add(5, "days").format('DD/MM/YY'))
     }
+
+
 });
 
 
