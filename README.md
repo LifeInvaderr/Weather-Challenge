@@ -4,7 +4,7 @@ URL to this repository https://github.com/LifeInvaderr/Weather-Challenge
 URL to the deployed repository https://lifeinvaderr.github.io/Weather-Challenge/
 
 # How I started
-With this project, I had started strong. I knew the API's that I needed as well as wanted to use. 
+With this project, I had started strong. I knew the API's that I needed (however I overlooked the "One Call portion") as well as wanted to use. 
 I first set up the project with the HTML and CSS, primarily using the BULMA framework as I prefer their framework to Bootstrap.
 
 I then added Jquery and the code that would fetch the weather api.
