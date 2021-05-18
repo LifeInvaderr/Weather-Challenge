@@ -10,7 +10,7 @@ $(document).ready(function () {
     var delButton = $("#clear");
 
     delButton.click(function () {
-        localStorage.clear();
+        localStorage.clear(save);
     })
 
 
@@ -20,14 +20,18 @@ $(document).ready(function () {
     var getLocalStorage = localStorage.getItem("cityName");
     var getCity = JSON.parse(getLocalStorage);
 
-    
+
     function loadData() {
+        $(".search-history").empty()
+
         for (i = 0; i < getCity.length; i++) {
             var create = $("<button>")
             create.attr("class", "button is-light is-fullwidth")
             create.attr("type", "button")
             create.text(getCity[i])
             $(".search-history").prepend(create)
+
+            console.log(getCity)
         }
     }
 
@@ -81,6 +85,7 @@ $(document).ready(function () {
 
                     });
             });
+        loadData()
     };
     // function to grab current weather and apply to current weath card
     function generateCurrentWeath(data) {
@@ -134,7 +139,6 @@ $(document).ready(function () {
         $(".day-five").text(moment().tz(timeZone).add(5, "days").format('DD/MM/YY'))
 
 
-        $(".search-history").empty();
 
         loadData();
     }
