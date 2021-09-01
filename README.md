@@ -1,30 +1,37 @@
-# Weather-Challenge
-URL to this repository https://github.com/LifeInvaderr/Weather-Challenge
+# Weather Dashboard
+URL to this repository https://github.com/LifeInvaderr/Weather-Dashboard
 
-URL to the deployed repository https://lifeinvaderr.github.io/Weather-Challenge/
+URL to the deployed repository https://lifeinvaderr.github.io/Weather-Dashboard/
 
-# How I started
-With this project, I had started strong. I knew the API's that I needed (however I overlooked the "One Call portion") as well as wanted to use. 
-I first set up the project with the HTML and CSS, primarily using the BULMA framework as I prefer their framework to Bootstrap.
+![Weather Dashboard](assets/images/WeatherDashboard.png)
 
-I then added Jquery and the code that would fetch the weather api.
-I did this with relative ease, plugging and playing with the api
+## Description
+Weather Dashboard allwows users to look up Towns and cities for the present forecast aswell as a five day forecast.
 
-# What I had struggled with
-With the previous lesson, I had problem after problem.
-The first problem that I had faced was that I not only needed open weather api, I needed their one call as well. I found this out when I was placing in my UV index.
-After implementing the One Call API, I then faced a challenge implementing Moment Timezone, as with the Timezone, I needed their cdn with data prefilled. I didn't realize this until hours later trying to trouble shoot.
+## Table of Contents
+* [Technologies](#technologies)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Questions](#questions)
+* [Updates](#updates)
 
-Laslty, the problem that I face the most is with localstorage. With the challenge before, I was beginning to understand how localstorage works. I understand how to setItem, as well as to parse it, and to push it as an array.
+## Technologies
+* Javascript
+* JQuery
+* HTML5
+* CSS
+* API
 
-However the most difficult challenge is adding them to clickable buttons, when updating localstorage. It only wants to update after the page has been refreshed.
+## Installation
+To install this repository, please either clone or install the zip version.
 
-# What I learned
-With this challenge, I learned to pay extra attention to documentation, as well as the required API, as I over looked the One Call API statement when starting.
+## Usage
+With Weather Dashboard, users have the ability to search for cities for a five day forecast. 
 
-# What I hope to fix
-I have spent far too much time with this project as of right now. I am planning to fix local storage as well as add the icons when I find the time.
+## Updates
+Future updates planned are to ensure the functionality of local storage on the search history. To ensure that the searched city is added in realtime, as well as the clear option to remove the searched items
 
-I need to know when to cut my losses, and I believe I have gone far enough. As I need to catch up with the other modules.
+## Questions
+For any questions or concerns, please email me at matthewkausfox@gmail.com
 
-I hope to comeback to this project and fix the issues.
+Thank you!
