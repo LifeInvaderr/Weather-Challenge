@@ -12,8 +12,8 @@ Weather Dashboard allwows users to look up Towns and cities for the present fore
 * [Technologies](#technologies)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Questions](#questions)
 * [Updates](#updates)
+* [Questions](#questions)
 
 ## Technologies
 * Javascript
