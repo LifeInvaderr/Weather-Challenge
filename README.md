@@ -19,7 +19,7 @@ Weather Dashboard allwows users to look up Towns and cities for the present fore
 * Javascript
 * JQuery
 * HTML5
-* CSS
+* CSS - Bulma
 * API
 
 ## Installation
